@@ -1,5 +1,6 @@
 import 'package:car_app/bottom_bar.dart';
 import 'package:car_app/cookie_page.dart';
+import 'package:car_app/mediaScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     DeviceOrientation.portraitDown,
   ]);
     return ScreenUtilInit(
-      designSize: Size(340,690),
+      designSize: Size(340,640),
       builder:() => 
          GetMaterialApp(
         debugShowCheckedModeBanner: false,
@@ -56,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
           IconButton(onPressed: (){}, icon:Icon(Icons.notifications_none), color: Color(0xFF545D68),),],
  ),
     body: ListView(
-      padding: EdgeInsets.only(left:20.h),
+      padding: EdgeInsets.only(left:20.w),
       children: [
         SizedBox(height: 15.0.h),
         Text("Categories",
@@ -66,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
           controller: _tabController,
           indicatorColor: Colors.transparent,
           labelColor: Color(0xFFC88D67),
-          labelPadding: EdgeInsets.only(right: 45.h),
+          labelPadding: EdgeInsets.only(right: 45.w),
           isScrollable: true,
           unselectedLabelColor: Color(0xFFCDCDCD),
           tabs: [
@@ -93,6 +94,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
                 )
 
           ]),
+          // TabBar Body 
           Container(
                 height: MediaQuery.of(context).size.height - 50.0,
                 width: double.infinity,

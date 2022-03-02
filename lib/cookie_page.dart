@@ -14,7 +14,7 @@ class CookiePage extends StatelessWidget {
         children: [
           SizedBox(height: 15.h),
           Container(
-            padding: EdgeInsets.only(right: 15.h),
+            padding: EdgeInsets.only(right: 15.w),
             width: MediaQuery.of(context).size.width - 30.w,
             height: MediaQuery.of(context).size.height - 50.h,
             child: GridView.count(crossAxisCount: 2,
@@ -46,7 +46,7 @@ class CookiePage extends StatelessWidget {
     
   }
   Widget _buildCard(String name, String price, String imgPath, bool added, bool isFavorite, context){
-    return Padding(padding: EdgeInsets.only(top:15.h,left: 5.w, right: 5.w, bottom: 5.h),
+    return Padding(padding: EdgeInsets.only(top:5.h,left: 5.w, right: 5.w, bottom: 5.h),
     child: InkWell(
       onTap: (){
         Get.to(()=>CookieDetail(assetPath: imgPath, cookiePrice: price,cookieName:name));
@@ -86,36 +86,36 @@ class CookiePage extends StatelessWidget {
                 ),
             SizedBox(height:7.h),
               Text(price, style: TextStyle(
-                color: Color(0xFFCC8053), fontFamily: 'Varela', fontSize: 14.0)),
-              Text(name,style: TextStyle( color: Color(0xFF575E67),fontFamily: 'Varela',fontSize: 14.0)),
+                color: Color(0xFFCC8053), fontFamily: 'Varela', fontSize: 14.sp)),
+              Text(name,style: TextStyle( color: Color(0xFF575E67),fontFamily: 'Varela',fontSize: 14.0.sp)),
                   Padding(
                       padding: EdgeInsets.all(8.0),
-                      child: Container(color: Color(0xFFEBEBEB), height: 1.0)),
+                      child: Container(color: Color(0xFFEBEBEB), height: 1.h)),
                   Padding(
-                      padding: EdgeInsets.only(left: 5.0, right: 5.0),
+                      padding: EdgeInsets.only(left: 5.w, right: 5.w),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                            if (!added) ...[
                               Icon(Icons.shopping_basket,
-                                  color: Color(0xFFD17E50), size: 12.0),
+                                  color: Color(0xFFD17E50), size: 12.sp),
                               Text('Add to cart',
                                   style: TextStyle(
                                       fontFamily: 'Varela',
                                       color: Color(0xFFD17E50),
-                                      fontSize: 12.0))
+                                      fontSize: 12.sp))
                             ],
                             if (added) ...[
                               Icon(Icons.remove_circle_outline,
-                                  color: Color(0xFFD17E50), size: 12.0),
+                                  color: Color(0xFFD17E50), size: 12.sp),
                               Text('3',
                                   style: TextStyle(
                                       fontFamily: 'Varela',
                                       color: Color(0xFFD17E50),
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 12.0)),
+                                      fontSize: 12.sp)),
                               Icon(Icons.add_circle_outline,
-                                  color: Color(0xFFD17E50), size: 12.0),
+                                  color: Color(0xFFD17E50), size: 12.sp),
                             ]
                         ],
                       ),)

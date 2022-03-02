@@ -24,7 +24,7 @@ class BottomBar extends StatelessWidget {
             children: [
               Container(
                 height: 50.h,
-                width: MediaQuery.of(context).size.width /2 - 40.h,
+                width: MediaQuery.of(context).size.width /2 - 40.w,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -36,7 +36,7 @@ class BottomBar extends StatelessWidget {
               ),
               Container(
                 height: 50.h,
-                width: MediaQuery.of(context).size.width /2 - 40.h,
+                width: MediaQuery.of(context).size.width /2 - 40.w,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
