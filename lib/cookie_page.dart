@@ -64,6 +64,7 @@ class CookiePage extends StatelessWidget {
             )
           ],
         ),
+        // Content Column
         child: Column(
           children: [
             Padding(padding: EdgeInsets.all(5.0),
